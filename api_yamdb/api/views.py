@@ -4,7 +4,6 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, viewsets
 from rest_framework.filters import OrderingFilter
 from rest_framework.pagination import LimitOffsetPagination
-
 from reviews.models import Category, Comment, Genre, Review, Title
 
 from .filters import TitleFilter
