@@ -41,9 +41,9 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           context: api_yamdb/
-          file: Dockerfile
+          file: api_yamdb/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest 
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:v1
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
