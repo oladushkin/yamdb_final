@@ -10,7 +10,7 @@
 ## Установка
 Клонируем репозиторий на локальную машину:
 
-git clone git@github.com:oladushkin/yamdb_final.git
+`git clone git@github.com:oladushkin/yamdb_final.git`
 
 Создаем виртуальное окружение:
 
