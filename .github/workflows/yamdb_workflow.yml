@@ -10,7 +10,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
 
     - name: Install dependencies
       run: |
@@ -50,6 +50,7 @@ jobs:
     steps:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
+        if: github.ref_name == 'master'
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
