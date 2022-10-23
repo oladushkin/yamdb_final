@@ -3,10 +3,13 @@ name: Django-app workflow
 on: [push]
 
 jobs:
-  tests:
+  build:
+
     runs-on: ubuntu-latest
-    matrix:
-      python-version: ["3.7", "3.8", "3.9", "3.10"]
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
