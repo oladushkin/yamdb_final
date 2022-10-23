@@ -58,7 +58,8 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo git clone git@github.com:oladushkin/yamdb_final.git
-            cd yamdb_final/infra
+            cd yamdb_final
+            cd infra
             sudo docker-compose up -d --build 
             cd ~
             sudo rm -R yamdb_final
