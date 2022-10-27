@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: oladushkin/yamdb_final:lates
+    image: oladushkin/yamdb_final:v2
     restart: always
     volumes:
       - static_value:/app/static/
